@@ -1,0 +1,8 @@
+prefix=/home/ubuntu2005/midterm/devel
+
+Name: midterm
+Description: Description of midterm
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
