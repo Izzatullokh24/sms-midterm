@@ -82,3 +82,176 @@ Install space: /home/ubuntu2005/catkin_ws/midterm/install
 ####
 ubuntu2005@ubuntu:~/catkin_ws/midterm$ 
 '''
+
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ roscore
+... logging to /home/ubuntu2005/.ros/log/5be03362-e04a-11ed-af3b-8dc38783555c/roslaunch-ubuntu-8450.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://ubuntu:37759/
+ros_comm version 1.16.0
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: noetic
+ * /rosversion: 1.16.0
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [8458]
+ROS_MASTER_URI=http://ubuntu:11311/
+
+setting /run_id to 5be03362-e04a-11ed-af3b-8dc38783555c
+process[rosout-1]: started with pid [8468]
+started core service [/rosout]
+
+
+
+
+
+
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ source devel/setup.bash 
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ rossrv list
+control_msgs/QueryCalibrationState
+control_msgs/QueryTrajectoryState
+control_toolbox/SetPidGains
+controller_manager_msgs/ListControllerTypes
+controller_manager_msgs/ListControllers
+controller_manager_msgs/LoadController
+controller_manager_msgs/ReloadControllerLibraries
+controller_manager_msgs/SwitchController
+controller_manager_msgs/UnloadController
+diagnostic_msgs/AddDiagnostics
+diagnostic_msgs/SelfTest
+dynamic_reconfigure/Reconfigure
+gazebo_msgs/ApplyBodyWrench
+gazebo_msgs/ApplyJointEffort
+gazebo_msgs/BodyRequest
+gazebo_msgs/DeleteLight
+gazebo_msgs/DeleteModel
+gazebo_msgs/GetJointProperties
+gazebo_msgs/GetLightProperties
+gazebo_msgs/GetLinkProperties
+gazebo_msgs/GetLinkState
+gazebo_msgs/GetModelProperties
+gazebo_msgs/GetModelState
+gazebo_msgs/GetPhysicsProperties
+gazebo_msgs/GetWorldProperties
+gazebo_msgs/JointRequest
+gazebo_msgs/SetJointProperties
+gazebo_msgs/SetJointTrajectory
+gazebo_msgs/SetLightProperties
+gazebo_msgs/SetLinkProperties
+gazebo_msgs/SetLinkState
+gazebo_msgs/SetModelConfiguration
+gazebo_msgs/SetModelState
+gazebo_msgs/SetPhysicsProperties
+gazebo_msgs/SpawnModel
+laser_assembler/AssembleScans
+laser_assembler/AssembleScans2
+map_msgs/GetMapROI
+map_msgs/GetPointMap
+map_msgs/GetPointMapROI
+map_msgs/ProjectedMapsInfo
+map_msgs/SaveMap
+map_msgs/SetMapProjections
+nav_msgs/GetMap
+nav_msgs/GetPlan
+nav_msgs/LoadMap
+nav_msgs/SetMap
+nodelet/NodeletList
+nodelet/NodeletLoad
+nodelet/NodeletUnload
+pcl_msgs/UpdateFilename
+polled_camera/GetPolledImage
+roscpp/Empty
+roscpp/GetLoggers
+roscpp/SetLoggerLevel
+roscpp_tutorials/TwoInts
+rospy_tutorials/AddTwoInts
+rospy_tutorials/BadTwoInts
+rviz/SendFilePath
+sensor_msgs/SetCameraInfo
+std_srvs/Empty
+std_srvs/SetBool
+std_srvs/Trigger
+tf/FrameGraph
+tf2_msgs/FrameGraph
+topic_tools/DemuxAdd
+topic_tools/DemuxDelete
+topic_tools/DemuxList
+topic_tools/DemuxSelect
+topic_tools/MuxAdd
+topic_tools/MuxDelete
+topic_tools/MuxList
+topic_tools/MuxSelect
+turtlesim/Kill
+turtlesim/SetPen
+turtlesim/Spawn
+turtlesim/TeleportAbsolute
+turtlesim/TeleportRelative
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ rosrun midterm service_server
+[rosrun] Couldn't find executable named service_server below /home/ubuntu2005/catkin_ws/midterm/src/midterm
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ 
+
+
+
+
+
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ source devel/setup.bash
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ rosservice list
+/rosout/get_loggers
+/rosout/set_logger_level
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ rosservice call /weather_station Istanbul
+ERROR: Service [/weather_station] is not available.
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ 
+
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ source devel/setup.bash
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ roslaunch midterm speed_check_simulator.launch
+RLException: [speed_check_simulator.launch] is neither a launch file in package [midterm] nor is [midterm] a launch file name
+The traceback for the exception was written to the log file
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ rosparam list
+/rosdistro
+/roslaunch/uris/host_ubuntu__37759
+/rosversion
+/run_id
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ osparam dump
+
+Command 'osparam' not found, did you mean:
+
+  command 'ohparam' from deb openhpi-clients (3.8.0-2build4)
+  command 'rosparam' from deb python3-rosparam (1.14.3+ds1-11ubuntu5)
+
+Try: sudo apt install <deb name>
+
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ rosparam dump
+rosdistro: 'noetic
+
+  '
+roslaunch:
+  uris:
+    host_ubuntu__37759: http://ubuntu:37759/
+rosversion: '1.16.0
+
+  '
+run_id: 5be03362-e04a-11ed-af3b-8dc38783555c
+ubuntu2005@ubuntu:~/catkin_ws/midterm$ rostopic echo speed
+WARNING: topic [/speed] does not appear to be published yet
+rosparam set speed 68
+
+
+
+
+
+
+
+
+  
+
+
+
