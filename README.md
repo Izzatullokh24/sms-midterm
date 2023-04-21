@@ -1,5 +1,5 @@
 # sms-midterm
-'''
+```
 ubuntu2005@ubuntu:~$ ls
 assigment3_ws   assignment4     Downloads              Pictures     Public        week3
 assignment_1    assignment4_ws  install_ros_noetic.sh  project2     sms-project3  week3.sh
@@ -81,7 +81,8 @@ Install space: /home/ubuntu2005/catkin_ws/midterm/install
 #### Running command: "make -j2 -l2" in "/home/ubuntu2005/catkin_ws/midterm/build"
 ####
 ubuntu2005@ubuntu:~/catkin_ws/midterm$ 
-'''
+```
+```
 
 ubuntu2005@ubuntu:~/catkin_ws/midterm$ roscore
 ... logging to /home/ubuntu2005/.ros/log/5be03362-e04a-11ed-af3b-8dc38783555c/roslaunch-ubuntu-8450.log
@@ -112,8 +113,8 @@ started core service [/rosout]
 
 
 
-
-
+```
+```
 
 ubuntu2005@ubuntu:~/catkin_ws/midterm$ source devel/setup.bash 
 ubuntu2005@ubuntu:~/catkin_ws/midterm$ rossrv list
@@ -200,9 +201,9 @@ ubuntu2005@ubuntu:~/catkin_ws/midterm$ rosrun midterm service_server
 ubuntu2005@ubuntu:~/catkin_ws/midterm$ 
 
 
+```
 
-
-
+```
 ubuntu2005@ubuntu:~/catkin_ws/midterm$ source devel/setup.bash
 ubuntu2005@ubuntu:~/catkin_ws/midterm$ rosservice list
 /rosout/get_loggers
@@ -245,7 +246,7 @@ WARNING: topic [/speed] does not appear to be published yet
 rosparam set speed 68
 
 
-
+```
 
 
 
